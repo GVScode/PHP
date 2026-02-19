@@ -1,0 +1,69 @@
+-----------------------------------------------------------------------------------
+---------------------------------- PHP --------------------------------------------
+-----------------------------------------------------------------------------------
+Nessa aula, aprendemos:
+
+Uma variável guarda um valor
+Uma variável tem um $ na frente e para atribuir um valor usamos =
+O nome da variável não deve usar caracteres especiais
+Para imprimir o valor de uma variável também usamos o comando echo
+PHP dá suporte às operações matemáticas através dos seguintes operadores:
+Soma: +
+Subtração: -
+Multiplicação: *
+Divisão: /
+Resto da divisão (módulo): %
+Potência: **
+PHP possui tipos de dados como integer, double, string ou boolean (tipos primitivos)
+PHP descobre os tipos de variáveis dinamicamente (tipagem dinâmica)
+Utilizando gettype conseguimos descobrir o tipo de uma variável
+
+
+É recomendado utilizar o string PHP_EOL para quebra de linha pois existam
+sistemas operacionais que aceitam "\n" "\r", e utilizando dessa forma
+garantimos que a quebra de linha ocorra em qualquer sistema operacional
+mantendo um código mais legível
+
+<?php
+
+$idade = 27;
+echo "ola mundo", PHP_EOL;
+echo "Minha idade é: $idade anos";
+
+=======================================================================================
+18/02/2026
+Nesta aula, aprendemos:
+
+Para concatenar uma string com uma outra variável usamos o . (ponto)
+Podemos definir uma string com aspas simples(') ou duplas(")
+Para interpretar um valor da variável ou caractere especial dentro da string devemos usar aspas duplas
+caracteres especias são:
+Nova linha: \n ou \r
+Tab: \t
+PHP possui uma constante para indicar uma quebra de linha: PHP_EOL
+
+Vimos que há mais de uma forma de representar o operador lógico “ou”, sendo possível através da
+palavra or ou dos caracteres ||. Embora o segundo seja mais comum e mais utilizado,
+o primeiro é mais legível e amigável para quem está começando.
+
+Mas existe uma pequena diferença entre ambos. Assim como operadores matemáticos têm regras
+de precedência, operadores lógicos também.
+
+A precedência de todos os operadores existentes pode ser conferida na documentação,
+mas para não confundir mais do que ajudar, basicamente funciona assim:
+
+Primeiro serão avaliadas as regras individualmente, e depois os operadores serão aplicados
+na seguinte ordem:
+
+&&
+||
+and
+or
+Os operadores de comparação (<, >, ==, !=) têm a mesma precedência, logo, serão avaliados
+da esquerda para direita.
+Talvez isso tudo fique um pouco confuso agora, mas não se preocupe. A prática fará com
+que isso fique bem mais claro.
+
+
+
+
