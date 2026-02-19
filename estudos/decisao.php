@@ -15,4 +15,4 @@ if ($idade >=18){
      echo PHP_EOL . "É uma pena";
 }
 echo PHP_EOL;
-echo "Adeus!";
+echo "Adeus parça!";
