@@ -5,7 +5,7 @@ Este repositório foi criado para armazenar e organizar os estudos e projetos de
 ## Objetivos
 
 - Aprender os fundamentos da linguagem PHP.
-- Explorar conceitos avançados, como OOP (Programação Orientada a Objetos).
+- Explorar conceitos avançados, como POO (Programação Orientada a Objetos).
 - Implementar práticas recomendadas de desenvolvimento.
 - Compartilhar conhecimentos e recursos úteis.
 
