@@ -6,12 +6,12 @@ $posmenor = 0;
 $vetor = array();      // Declara o array corretamente
 
 // Lê 15 números e armazena no vetor
-for ($i = 0; $i < 15; $i++) {
+for ($i = 0; $i < 5; $i++) {
     $vetor[$i] = (float) readline("Digite o " . ($i + 1) . "º número: ");
 }
 
 // Encontra o maior número e sua posição
-for ($i = 0; $i < 15; $i++) {
+for ($i = 0; $i < 5; $i++) {
     if ($vetor[$i] > $maior) {
         $maior = $vetor[$i];
         $posmaior = $i + 1;  // Posição começa em 1
@@ -19,7 +19,7 @@ for ($i = 0; $i < 15; $i++) {
 }
 
 // Encontra o menor número e sua posição
-for ($i = 0; $i < 15; $i++) {
+for ($i = 0; $i < 5; $i++) {
     if ($vetor[$i] < $menor) {
         $menor = $vetor[$i];
         $posmenor = $i + 1;  // Posição começa em 1
