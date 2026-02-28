@@ -1,0 +1,28 @@
+Exercícios sobre a estrutura de repetição WHILE.
+
+
+1. Faça um programa que leia as tecla digitadas pelo usuário uma a uma e as mostre na tela. O programa somente deve ser encerrado quando a tecla “#” for pressionada.
+
+2. Escreva um algoritmo de conversão de dólar. O algoritmo deve iniciar solicitando a cotação do dólar. Em seguida, deve solicitar um valor em dólares e apresentar na tela o equivalente em reais. Ao final, deve-se perguntar se o usuário se este deseja continuar. Se sim, a operação deve ser repetida, caso contrário o programa deve encerrar.
+3. Faça um programa que pergunte ao usuário o preço de vários produtos e mostre ao final o valor total destes. O programa deve pedir ao usuário o valor de um produto e perguntar se o
+usuário deseja adicionar mais um. Enquanto o usuário responder que sim, o programa deve pedir o valor do novo produto e somar com os valores informados anteriormente. Quando o usuário responder que não, o programa deve sair do laço de repetição e mostrar o total.
+
+
+Exercícios sobre a estrutura de decisão DO - WHILE.
+
+
+1. Faça um algoritmo que leia um conjunto de números (num) e imprima na tela a sua soma (soma) e a sua média (media). Admita que o valor -1 é utilizado como sentinela para finalizar a leitura de números. Ex.: num = 1, 2, 3 / soma = 6 / media = 2
+
+2. Faça um algoritmo que leia um conjunto de dados numéricos (num) e imprima na tela o maior (max) dentre eles. Admita que o valor -1 é utilizado como sentinela para finalizar a leitura de números. Ex.: num = 1, 2, 3 / max = 3
+
+
+Exercícios sobre a estrutura de repetição FOR.
+
+
+1. Faça um algoritmo que calcule a média de salários de uma empresa, pedindo ao usuário a quantidade de funcionários e o salário de cada funcionário. O programa deve imprimir na tela um relatório contendo a média salarial, o salário mais alto e o salário mais baixo.
+
+
+2. Sem utilizar a operação de multiplicação, escreva um programa que multiplique dois números inteiros. Por exemplo: 3 * 2 = 2 + 2 + 2.
+
+
+3. Faça um programa que imprima a tabuada de 1 até 10.
