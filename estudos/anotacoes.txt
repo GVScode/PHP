@@ -81,3 +81,13 @@ O bloco elseif sempre precisa de um if antes
 O bloco else sempre precisa de um if ou elseif antes -O bloco else só executa se nenhuma das condições anteriores forem verdadeiras
 Através do && (AND lógico) e do || (OR lógico) podemos avaliar mais de uma condição
 
+
+========================================================================
+28/02 
+
+incremento:
+
+$contador = $contador + 1;
+$contador += 1;
+$contador++;
+
