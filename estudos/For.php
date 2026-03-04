@@ -28,3 +28,5 @@ for ($i = 0; $i < 5; $i++) {
 echo "O maior número é: $maior e se encontra na posição $posmaior" . PHP_EOL;
 echo "O menor número é: $menor e se encontra na posição $posmenor" . PHP_EOL;
 ?>
+
+quebrei tudo
