@@ -1,7 +1,7 @@
 <?php
 
-$peso = 100;
-$altura = 1.65;
+$peso = readline ("Digite seu peso: ");
+$altura = readline("Digite sua altura: ");
 $imc = $peso / ($altura ** 2);
 
 echo "O IMC é: $imc" . PHP_EOL;
