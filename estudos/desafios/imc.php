@@ -8,7 +8,7 @@ echo "O IMC é: $imc" . PHP_EOL;
 
 if ($imc < 18.5) {
    echo "Abaixo do peso" . PHP_EOL;
-   
+
 } elseif
  ($imc >= 18.5 && $imc < 25){  
     echo "Peso normal" . PHP_EOL;
