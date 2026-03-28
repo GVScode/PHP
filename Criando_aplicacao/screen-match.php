@@ -1,6 +1,7 @@
 <?php
 
-echo "Bem vindo (a) ao Screen Match!\n\n";
+echo "Bem vindo (a) ao Screen Match!
+";
 
 $nomeFilme = "Top Gun - Maverick \n";
 $anoLancamento = 2022 . "\n";

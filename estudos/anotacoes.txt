@@ -30,7 +30,7 @@ $idade = 27;
 echo "ola mundo", PHP_EOL;
 echo "Minha idade é: $idade anos";
 
-=======================================================================================
+=======================================================================
 18/02/2026
 Nesta aula, aprendemos:
 
@@ -106,3 +106,5 @@ for que possui a declaração de uma variável, uma condição entrada e o incre
 Dentro do bloco do laço podemos pular uma interação com o comando continue
 Com o comando break podemos sair do laço
 A variável contador normalmente se chama i
+
+========================================================================
