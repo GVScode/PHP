@@ -92,3 +92,84 @@ echo $resultado; // Exibe 5
 
 Outros operadores
 O PHP ainda possui outros operadores, como operadores de operação bit a bit (para lidar com operações em números binários), operadores de texto etc. O que apresentamos já é uma boa introdução aos operadores do PHP e nós podemos aprender os demais conforme a necessidade surgir.
+
+=======================================================================
+29/03 
+
+
+Exercicios
+
+Praticar é muito importante! Por isso, preparamos uma lista de exercícios para você exercitar o conteúdo abordado nesta aula.
+
+1 - Escreva um programa em PHP que exiba seu nome na tela.
+
+2 - Crie um programa em PHP que calcule a média de três notas e exiba o resultado.
+
+3 - Elabore um programa em PHP que receba um valor em metros e converta para centímetros.
+
+4 - Desenvolva um programa em PHP que verifique se um ano é bissexto ou não.
+
+5 - Escreva um programa em PHP que converta uma temperatura de Celsius para Fahrenheit.
+
+Você pode clicar no botão “Opinião do instrutor” para conferir as respostas.
+
+
+Uma alternativa ao if/else é o switch case, que é uma estrutura de controle de fluxo que permite executar diferentes ações com base no valor de uma expressão. É uma forma mais simplificada e legível de escrever vários blocos if/else encadeados, desde que as operações sejam somente de igualdade.
+
+A sintaxe do switch case em PHP é a seguinte:
+
+switch (expressão) {
+   case valor1:
+      // código a ser executado se a expressão for igual a valor1
+      break;
+   case valor2:
+      // código a ser executado se a expressão for igual a valor2
+      break;
+   case valor3:
+      // código a ser executado se a expressão for igual a valor3
+      break;
+   ...
+   default:
+      // código a ser executado se a expressão não for igual a nenhum valor
+      break;
+}
+
+
+A expressão é uma variável ou uma expressão de código que será avaliada. Cada case é uma possível condição que pode ser atendida pela expressão. Quando a expressão é igual ao valor especificado em um determinado case, o código correspondente a esse case será executado. A palavra-chave break é usada para sair do switch case após a execução do código correspondente.
+
+O case default é opcional e é executado quando nenhum dos cases especificados é atendido.
+
+Veja um exemplo simples de uso do switch case em PHP para verificar o dia da semana com base em um número inteiro:
+
+<?php
+
+$dia = 3;
+
+switch ($dia) {
+   case 1:
+      $nomeDia = "domingo";
+      break;
+   case 2:
+      $nomeDia = "segunda-feira";
+      break;
+   case 3:
+      $nomeDia = "terça-feira";
+      break;
+   case 4:
+      $nomeDia = "quarta-feira";
+      break;
+   case 5:
+      $nomeDia = "quinta-feira";
+      break;
+   case 6:
+      $nomeDia = "sexta-feira";
+      break;
+   case 7:
+      $nomeDia = "sábado";
+      break;
+   default:
+      $nomeDia = "Dia inválido";
+      break;
+}
+
+echo "O dia $dia é $nomeDia";
