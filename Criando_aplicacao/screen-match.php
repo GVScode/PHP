@@ -2,19 +2,23 @@
 
 echo "Bem vindo (a) ao Screen Match!\n";
 
-$anoLancamento = $argv[1] ?? 2022 ."\n"; //O operador de coalescência nula (??), introduzido no PHP 7, é um atalho sintático para verificar se uma variável existe e não é null. Ele retorna o valor da variável se ela existir e não for null; caso contrário, retorna um valor padrão especificado após o operador. No exemplo, se $argv[1] estiver definido e não for null, seu valor será usado como o ano de lançamento. Caso contrário, o ano de lançamento será definido como 2022.
-
-$nomeFilme = "Se beber não case";
-$nomeFilme = "Thor - Hagnarok";
 $nomeFilme = "Top Gun - Maverick";
 
-$somanota = 9;
-$somanota += 6;
-$somanota += 8;
-$somanota += 7.5;
-$somanota += 5;
+$anoLancamento =  2022; 
 
-$notaFilme = $somanota / 5;
+$quantidadeDeNotas = $argc - 1;
+$somaDeNotas = 0;
+
+for ($contador = 1; $contador < $argc; $contador ++) {
+    $somaDeNotas += $argv[$contador];
+}
+
+$contador = 1;
+while ($argc [$contador] != 0) {
+    $somaDeNotas += $argv[$contador];
+}
+
+$notaFilme = $somaDeNotas / $quantidadeDeNotas;
 $planoPrime = true;
 
 $incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
@@ -42,6 +46,6 @@ $genero = match ($nomeFilme) {
     default => "Gênero desconhecido"
 };
 
-echo "O gênero do filme é: $genero";
+echo "O gênero do filme é: $genero\n";
 
-
+echo $argc -1; //O $argc é uma variável global em PHP que contém o número de argumentos passados para o script, incluindo o nome do script. Ele é útil para verificar quantos argumentos foram fornecidos ao executar um script a partir da linha de comando.
