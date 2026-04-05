@@ -6,19 +6,20 @@ $nomeFilme = "Top Gun - Maverick";
 
 $anoLancamento =  2022; 
 
-$quantidadeDeNotas = $argc - 1;
-$somaDeNotas = 0;
+$quantidadeDeNotas = $argc - 1 ;
+$notas = [];
 
 for ($contador = 1; $contador < $argc; $contador ++) {
-    $somaDeNotas += $argv[$contador];
+    $notas[] = (float)$argv[$contador];
 }
 
-$contador = 1;
-while ($argc [$contador] != 0) {
-    $somaDeNotas += $argv[$contador];
+$somaDeNotas = 0;
+foreach ($notas as $nota) {
+    $somaDeNotas += $nota;
 }
 
-$notaFilme = $somaDeNotas / $quantidadeDeNotas;
+
+$notaFilme = array_sum($notas) / $quantidadeDeNotas;
 $planoPrime = true;
 
 $incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
@@ -48,4 +49,11 @@ $genero = match ($nomeFilme) {
 
 echo "O gênero do filme é: $genero\n";
 
-echo $argc -1; //O $argc é uma variável global em PHP que contém o número de argumentos passados para o script, incluindo o nome do script. Ele é útil para verificar quantos argumentos foram fornecidos ao executar um script a partir da linha de comando.
+$filme = [
+"nome" =>  "THOR - HAGNAROK",
+"ano" => 2021,
+"nota" => 7.8,
+"genero" => "Super-herói",
+];
+
+echo $filme["ano"];    
