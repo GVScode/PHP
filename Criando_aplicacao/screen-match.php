@@ -1,5 +1,20 @@
 <?php
 
+function exibeMensagemLancamento($ano) {
+    if ($ano > 2022) {
+    echo "Esse filme é um lançamento!\n";
+    } elseif ($ano > 2020 && $ano <= 2022) {
+    echo "Esse filme ainda é novo!\n";
+    }else{
+    echo "Esse Não é um lançamento!\n";
+    }
+}
+
+function incluidoPlano($planoPrime, $anoLancamento) {
+    return $planoPrime || $anoLancamento < 2020;
+}
+
+
 echo "Bem vindo (a) ao Screen Match!\n";
 
 $nomeFilme = "Top Gun - Maverick";
@@ -22,23 +37,14 @@ foreach ($notas as $nota) {
 $notaFilme = array_sum($notas) / $quantidadeDeNotas;
 $planoPrime = true;
 
-$incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
+$incluidoNoPlano = incluidoPlano($planoPrime, $anoLancamento) ? "Sim" : "Não";
 
 echo "nome do filme .....:$nomeFilme\n";
 echo "Ano de lançamento .:$anoLancamento\n";
 echo "Nota ..............:$notaFilme\n";
 echo "Incluído no plano  ?$incluidoNoPlano\n";
 
-if ($anoLancamento > 2022) {
-    echo "Esse filme é um lançamento!\n";
-} elseif ($anoLancamento > 2020 && $anoLancamento <= 2022) {
-    echo "Esse filme ainda é novo!\n";
-}
-else{
-    echo "Esse Não é um lançamento!\n";
-}
-
-// Abaixo a função match no PHP 8+ é uma expressão de controle que compara um valor (sujeito) contra múltiplos casos usando verificação estrita (===). Ela retorna o valor do primeiro caso correspondente, não precisa de break, e suporta um caso default. É mais concisa, segura e legível que o switch.
+exibeMensagemLancamento($anoLancamento);
 
 $genero = match ($nomeFilme) {
     "Top Gun - Maverick" => "Ação",
@@ -57,3 +63,4 @@ $filme = [
 ];
 
 echo $filme["ano"];    
+

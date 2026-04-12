@@ -1,5 +1,9 @@
 <?php
 
+
+
+
+
 $saldo = 1_000;
 $titularConta = "Guilherme Varjão Santos";
 
@@ -8,6 +12,8 @@ echo "Titular da conta: $titularConta\n";
 echo "Saldo da conta: R$ $saldo\n";
 echo "***************\n";
 
+
+do{
 echo "1. Consultar saldo\n";
 echo "2. Depositar dinheiro\n";
 echo "3. Sacar dinheiro\n";
@@ -15,9 +21,13 @@ echo "4. Sair\n";
 
 $opcao = (int) fgets(STDIN);
 
+
 switch ($opcao) {
     case 1:
-        echo "Saldo atual: R$ $saldo\n";
+        echo "***************\n";
+        echo "Titular da conta: $titularConta\n";
+        echo "Saldo da conta: R$ $saldo\n";
+        echo "***************\n";
         break;
     case 2:
         echo "Digite o valor a ser depositado: \n";
@@ -42,3 +52,4 @@ switch ($opcao) {
         echo "Opção inválida. Por favor, escolha uma opção válida.\n";
 }
 
+}while ($opcao !== 4);
