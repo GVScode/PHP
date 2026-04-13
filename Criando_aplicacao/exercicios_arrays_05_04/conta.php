@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 $saldo = 1_000;
 $titularConta = "Guilherme Varjão Santos";
 
@@ -12,7 +8,6 @@ echo "Titular da conta: $titularConta\n";
 echo "Saldo da conta: R$ $saldo\n";
 echo "***************\n";
 
-
 do{
 echo "1. Consultar saldo\n";
 echo "2. Depositar dinheiro\n";
@@ -20,7 +15,6 @@ echo "3. Sacar dinheiro\n";
 echo "4. Sair\n"; 
 
 $opcao = (int) fgets(STDIN);
-
 
 switch ($opcao) {
     case 1:
