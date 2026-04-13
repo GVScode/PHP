@@ -177,7 +177,14 @@ switch ($dia) {
 
 
 =============================================================================================
-12/04
+13/04
+
+
+var_dump($notas);   ->  Exibe um array com o numero da posição do array, o tipo e o valor atribuído a aquela posição do array
+
+sort($notas);       ->  Ordena as posições do array do menor para o maior
+
+echo min($notas);   ->  Retorna a menor ocorrência dentro dos arrays
 
 
 
