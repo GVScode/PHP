@@ -93,7 +93,7 @@ echo $resultado; // Exibe 5
 Outros operadores
 O PHP ainda possui outros operadores, como operadores de operação bit a bit (para lidar com operações em números binários), operadores de texto etc. O que apresentamos já é uma boa introdução aos operadores do PHP e nós podemos aprender os demais conforme a necessidade surgir.
 
-=======================================================================
+$$========================================$$
 29/03 
 
 
@@ -176,7 +176,7 @@ switch ($dia) {
 
 
 
-=============================================================================================
+$$========================================$$
 13/04
 
 
@@ -185,8 +185,20 @@ var_dump($notas);   ->  Exibe um array com o numero da posição do array, o tip
 sort($notas);       ->  Ordena as posições do array do menor para o maior
 
 echo min($notas);   ->  Retorna a menor ocorrência dentro dos arrays
+,
 
 
+$$========================================$$
+14/04  
 
+Exercicios
 
+Escreva uma função em PHP que receba dois números inteiros e uma string representando a operação matemática e retorne o resultado da operação.
+Crie uma função em PHP que calcule o IMC baseado na altura e peso passados por parâmetro.
+Crie uma função em PHP que converta graus celsius para Fahrenheit.
 
+finalizamos a aula:
+
+05 Operando com textos
+
+$$========================================$$
