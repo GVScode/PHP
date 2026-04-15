@@ -69,4 +69,11 @@ var_dump($notas);
 sort($notas);
 var_dump($notas);
 $menorNota = min($notas);
-echo $menorNota;
+var_dump($menorNota);
+
+
+var_dump ($filme['nome']);
+$posicaoDoisPontos = strpos($filme['nome'], ":");
+var_dump($posicaoDoisPontos);
+
+var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
