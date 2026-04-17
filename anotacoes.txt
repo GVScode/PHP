@@ -108,3 +108,6 @@ Com o comando break podemos sair do laço
 A variável contador normalmente se chama i
 
 ========================================================================
+16/04 
+
+iniciar a proxima aula a partir da  09 Separando em arquivos
