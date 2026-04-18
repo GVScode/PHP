@@ -307,3 +307,29 @@ $$========================================$$
 
 iniciar a proxima aula a partir da  09 Separando em arquivos
 
+
+
+$$========================================$$
+18/04
+
+- Exercícios de array
+
+1 - Escreva um programa em PHP que inicialize um array de notas e exiba somente as 3 maiores notas do array.
+
+2 - Crie um programa em PHP que transforme a string “Vinicius Dias,1997,Programador” em um array em que cada item está separado por vírgulas.
+
+3 - Crie uma função em PHP que retorne as strings em ordem alfabetica
+
+4 - Escreva um programa em PHP que abra um arquivo chamado teste.txt para ler a primeira linha e depois o fecha.
+
+5 - Escreva um programa em PHP que abra o arquivo teste.txt, acrescente a frase "PHP é incrível!" no final do arquivo e depois o feche.
+
+6 - Crie um programa que converta a string '{"nome":"Vinicius","anoNascimento":1997,"profissao":"Dev"}' em um objeto.
+
+- JSON = Javascript object notation (Notações de objeto Javascript)
+
+
+
+Criar nova branch
+
+Para criar uma nova branch no Git e alternar para ela, utilize git checkout -b nome-da-branch ou git switch -c nome-da-branch. O comando -b cria e alterna automaticamente, garantindo que o novo ponteiro inicie no mesmo commit atual. Para enviar a nova branch ao repositório remoto, use git push -u origin nome-da-branch

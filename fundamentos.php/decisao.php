@@ -11,8 +11,8 @@ if ($idade >=18){
 }elseif ($idade >= 16 && $numeroDePessoas > 1){
     echo "você tem $idade anos, e está acompanhado(a), pode entrar. ";
 }else{
-    echo "você só tem $idade anos, e está sozinho, sai quente!";
+    echo "você só tem $idade anos, e está sozinho, não pode entrar!";
      echo PHP_EOL . "É uma pena";
 }
 echo PHP_EOL;
-echo "Adeus parça!";
+echo "Adeus!";
