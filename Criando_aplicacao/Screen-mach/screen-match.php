@@ -41,12 +41,12 @@ $genero = match ($nomeFilme) {
 
 echo "O gênero do filme é: $genero\n";
 
-$filme = [
-"nome" =>  "THOR - HAGNAROK",
-"ano" => 2021,
-"nota" => 7.8,
-"genero" => "Super-herói",
-];
+$filme = criaFilme(
+    nome: "Thor: Ragnarok",
+    anoLancamento: 2021,
+    nota: 7.8,
+    genero: "super-heroi" 
+);
 
 echo $filme["ano"];    
 
@@ -58,13 +58,14 @@ var_dump($notas);
 $menorNota = min($notas);
 var_dump($menorNota);
 
-
 var_dump ($filme['nome']);
 $posicaoDoisPontos = strpos($filme['nome'], ":");
 var_dump($posicaoDoisPontos);
 
 var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
 
-
 $filmeComoStringJson = json_encode($filme);
 file_put_contents(__DIR__ . "/filme.json", $filmeComoStringJson);
+
+
+// isso e coisa nova
