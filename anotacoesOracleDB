@@ -1,0 +1,563 @@
+======================================================================================
+======================================================================================
+----------------------- Banco de dados Notes ORACLE ----------------------------------
+======================================================================================
+======================================================================================
+
+SELECT OBJECT_NAME - VAI MOSTRAR SOMENTE A COLUNA NAME 
+WHERE OBJECT_TYPE = 'TABLE'
+
+CRIATE - SERVE PRA CRIAR UMA ESTRUTURA
+
+EXEMPLO: CREATE TABLE ALUNO
+(
+    RA           NUMBER(5)         PRIMARY KEY
+	NOME         VARCHAR2(45)      NOT NULL
+	ENDERECO     VARCHAR2(45)      NOT NULL
+	TELEFONE     CHAR(11)          NOT NULL
+	EMAIL        VARCHAR (60)
+	cpf          CHAR (11)         NOT NULL UNIQUE
+	
+)
+
+DESC ESTUDANTE
+
+INSERT INTO ESTUDANTE (RA, NOME, ENDERECO, TELEFONE, EMAIL, CPF)
+VALUES (2, 'RENAN SILVA','Rua das flores 23','11876523467','Gui@gmail.com','45645645645')
+
+---------------------------------------------------------------------------------------------
+							
+PARA EXIBIR A INFORMA  O QUE ACABAMOS DE INSERIR:
+
+SELECT NOME, ENDERECOM TELEFONE
+FROM ESTUDANTE
+
+PARA SELECIONAR TUDO DA TABELA UTILIZE "SELECT * "
+
+
+
+
+							
+======================================================================================
+======================================================================================
+17/02                  Dowload do ORACLE DATABASE							
+							
+							
+							
+							Primeira aula
+							
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%							
+
+CREATE TABLE PROFESSOR
+(
+   funcional    number(9)       primary key, 
+   nome         varchar(50)     not null,
+   telefone     char(9)             
+  
+)
+INSERT INTO PROFESSOR (FUNCIONAL, NOME, TELEFONE)
+VALUES(100, 'RENAN DA SILVA', '987650234' ) 						
+
+SELECT *
+FROM PROFESSOR
+
+// TRAZ TODA A CONSULTA DA TABELA PROFESSOR
+
+---------------------------------------------------------------------------
+
+CREATE TABLE CURSO
+(
+     NOME          VARCHAR(50)
+	 PRECO         NUMBER(10.2)
+	 DURACAO       NUMBER(2)
+	 funcional     number(5)
+	 foreing key  (funcional) references PROFESOR(FUNCIONAL)
+)
+
+
+INSERT INTO CURSO (CODIFO, NOME, PRECO, DURACAON FUNCIONAL)
+VALUES()1001,'Banco de Dados',10000,50,102)
+
+---------------------------------------------------------------------------
+
+select * from curso
+
+SELECT CURSO.NOME, CURSO.PRECO, PROFESSOR.NOME
+WHERE PROFESSOR.FUNCIONAL = CURSO FUNCIONAL
+
+======================================================================================
+======================================================================================
+24/02                             ORACLE DATABASE
+
+                                 usuario = system
+                                 Senha Oracle = G********$
+								 
+======================================================================================
+======================================================================================	
+
+CREATE TABLE CLIENTE_01
+(
+A01_CODIGO     NUMBER(5)        PRIMARY KEY,
+A01_NOME       VARCHAR2(50)     NOT NULL,
+A01_ENDERECO   VARCHAR2(50)     NOT NULL,
+A01_TELEFONE   CHAR(11)         NOT NULL,
+A01_CPF        CHAR(11)         NOT NULL UNIQUE,
+A01_CREDITO    NUMBER(10,2)
+)
+
+
+INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
+VALUES ('1','Guilherme','rua jose vasconcelos','11960558799','45645645644','1231,00')
+
+INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
+VALUES ('2','Giovanna','rua jose vasconcelos','11960545799','44445645644','789789,00')
+
+INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
+VALUES ('3','Murilo','rua jose vasconcelos','11969958799','45645647744','199991,00')
+
+INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
+VALUES ('4','Joselia','rua jose vasconcelos','11960558666','45645645454','987987,00')
+
+INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
+VALUES ('5','Joselito','rua jose vasconcelos','11960558711','45645645611','12551,00')
+
+
+SELECT * FROM  CLIENTE_01
+
+CREATE TABLE PEDIDO_02
+(
+    A02_NUMERO             NUMBER(5)       PRIMARY KEY,
+    A02_DATA               CHAR(10)        NOT NULL,
+    A02_VALOR_TOTAL        NUMBER(10,2)    NOT NULL
+    
+)
+
+SELECT * FROM PEDIDO_02
+
+INSERT INTO PEDIDO_02(A02_NUMERO,A02_DATA, A02_VALOR_TOTAL) 
+VALUES (103, '10/02/2025', 500)
+
+INSERT INTO PEDIDO_02(A02_NUMERO,A02_DATA, A02_VALOR_TOTAL) 
+VALUES (104, '01/02/2025', 900)
+
+INSERT INTO PEDIDO_02(A02_NUMERO,A02_DATA, A02_VALOR_TOTAL) 
+VALUES (100, '13/02/2025', 700)
+
+INSERT INTO PEDIDO_02(A02_NUMERO,A02_DATA, A02_VALOR_TOTAL) 
+VALUES (102, '30/02/2025', 123)
+
+CREATE TABLE PEDIDO_02_cliente_01
+(
+    A02_NUMERO             NUMBER(5)       PRIMARY KEY,
+    A02_DATA               CHAR(10)        NOT NULL,
+    A02_VALOR_TOTAL        NUMBER(10,2)    NOT NULL,
+    A01_CODIGO             NUMBER(5)       NOT NULL,
+    FOREIGN KEY  (A01_CODIGO) REFERENCES CLIENTE_01(A01_CODIGO)
+)
+
+SELECT * FROM PEDIDO_02_cliente_01
+
+
+INSERT INTO PEDIDO_02_cliente_01(A02_NUMERO, A02_DATA, A02_VALOR_TOTAL, A01_codigo)
+VALUES (104, '01/02/2025', 900, 1)
+
+INSERT INTO PEDIDO_02_cliente_01(A02_NUMERO, A02_DATA, A02_VALOR_TOTAL, A01_codigo)
+VALUES (100, '01/02/2025', 900, 1)
+
+SELECT * FROM PEDIDO_02_cliente_01
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Banco de dados Oracle%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+04/03/2025				
+
+Cartacter sticas de um diagrama ER (Entidade/ Relacionamento) 	
+
+- Diagrama claro e objetvo
+- Pode ser ensinado ao usu rio para entendimento e o usu rio possa colaborar com an lise
+do diagrama
+- Facil de ser desenvolvido
+
+&&&&&&&&&&&&&&&&&&&&&&&&&& ENTIDADE &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Caminho para chegar na modelagem das entidades   %%DATAMODELER&&
+
+Caminho para salvar o arquivo da UDEMY:
+C:\Users\guilh\ORACLE_SQL_DEVELOPER\Modelagem UDEMY
+
+
+Caminho que est  sendo usado para abrir como ADM:
+C:\Oracle database\datamodeler-24.3.1.351.0831-x64\datamodeler
+
+
+Caminho para chegar no $$$$ SQL DEVELOPER $$$ 
+
+C:\Oracle database\sqldeveloper-24.3.1.347.1826-x64\sqldeveloper
+
+
+Para criar uma nova entidade: 
+ na toolbar, clicar no segundo  cone (Pasta com engrenagem) o cursor apontar  nova entidade
+ preencha o nome da entidade e o apelido da entidade
+ 
+ 
+Para criar atributos da entidade:
+
+no arquivo "logical" do SQL Developer Data Modeler
+
+Ap s a cria  o das entidades dar double click encima da entidade criada
+
+clicar no  cone "+"
+
+na coluna   esquerda selecionar "atributos"
+Determina:
+nome do atributo, tipo de dado "logical"
+tipo de origem ex: numeric
+com 18 caracteres
+sem numero quebrado
+
+
+OBS: 
+atributos obrigat rios ficam com um "*" (aster sco)ao lado
+atributos opcionas dicam com " " (bolinha) ao lado
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  Diagrama E-R  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+- Entidade:   semmpre em maiusculo retangulo arredondado
+- Atributo: 
+atributos obrigat rios ficam com um "*" (aster sco)ao lado
+atributos opcionas dicam com " " (bolinha) ao lado
+atributos com "#" s o identificadores  nicos na entidade
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+&&&&&&&&&&&&&&&&&&&&&&&&&&&      Inst ncias de entidades        &&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+ 
+ inst ncias   uma classe ou categoria de objeto
+ 
+ ex: uma instancia   como a formma de um bolo
+ na entidade empregado:
+ Guilherme   um atributo de uma inst ncia = um bolo em uma forma
+ Giovanna   um atributo de uma inst ncia = um bolo em uma forma
+ Murilo   um atributo de uma inst ncia = um bolo em uma forma
+ 
+ 
+ Dicas de como encontrar entidades em uma entrevista com o usu rio:
+ 
+ - Procure por substantivos
+ - D  nome a cada entidade
+ - Verifique se est  no escopo do projeto
+ - Cada instancia da entidade pode ter uma identifica  o  nica?
+ - Escreva um conceito da entidade
+ - Escreva exemplos de inst ncias
+ - Fa a um diagramma ER e desenhe cada entidade identificada nesse processo, 
+ se poss vel inclua alguns atributos
+ 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Relacionamentos %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ Relacionammeentos com linha cheia:  _____________________________
+- s o obrigat rios 
+- Cardinalidade minima = 1 (Obrigat ria)
+- Para ler utiliza -se o termo "deve"
+ 
+ 
+ Relacionamentos com linha pontilhada ------------------------------
+- S o opcionais
+- Cardinalidade minima = 0(opcional) 
+- Utilizamos o termo "pode"
+
+                                         | 
+Relacionamentos com p  de galinha -----<-| 
+                                         |   
+										 
+representam cardinalidade mmaxima (um ou mais)		
+
+                                                       |
+relacionamentos que terminam apenas com a linha -------|								
+                                                       |
+
+representam cardinalidade maxima "um e somente um"
+
+                     Leitura de um diagrama ER
+					 
+					 
+Palavra chave    Entidade ORIGEM    opcionalidade   Nome do relacionamento   Cardinalidade     Entidade destino
+					 
+Cada    Entidade1        Pode ou deve    relacionamento 1         um/ um ou mais      Entidade 2
+Cada	Entidade2        Pode ou deve    relacionamento 2         um/um ou mais       Entidade 1
+    
+
+
+Tipos de relacionammentos: 
+
+- Muitos pra um (n:1)
+- Muitos pra muitos (n:n)
+- Relacionamento um pra um (1:1)
+
+
+OBSERVA  O: NA EMPRESA ORACLE EXISTE UMA FRAZE QUE DIZ, 
+(OS CORVOS VOAM PARA O LESTE OU PARA O SUL) significa que
+se usa como boa pr tica as rela  es com entidades que
+representa cardinalidade m xima (p  de galinha) de prefer ncia
+sempre com os p s para o lado contr rio ex:
+(p  de galinha pra cima) = bico do corvo pra baixo (sul)
+(p  de galinha para esquerda) = bico do corvo pra direira (leste)
+
+as vezes se o banco estiver congistionado pode acontecer 
+de precisar n o usar essa regra mas   dado como uma boa pr tica
+usar assim
+
+
+
+Refinando atributos:
+
+Identifique os atributos primary key  NICOS  (#) (u)
+
+Aula 19 - Normaliza  o do modelo de dados 3min de aula
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Aula pr tica 10/03 %%%%%%%%%%%%%%%%
+SELECT * 
+FROM USER_OBJECTS
+
+SELECT OBJECT_NAME, OBJECT_TYPE
+FROM USER_OBJECTS
+WHERE OBJECT_TYPE = 'TABLE';
+
+SELECT * FROM REGIONS
+
+DESC REGIONS
+
+CREATE TABLE REGIOES
+(
+    REGIAO_ID       NUMBER          PRIMARY KEY,
+    REGIAO_NOME     VARCHAR2(25)    NOT NULL
+)
+
+PRIMARY KEY - IDENTIFICA DE FORMA UNICA UM REGISTRO. PODE SER FORMADA POR 1 OU MAIS CAMPOS
+NOT NULL    - OBRIGADO A CADASTRAR - N O ACEITA VALOR NULO
+UNIQUE      - N O PERMITE REPETICAO DE VALOR - EX: CPF
+CHECK       - DELIMITA UMA FAIXA DE VALOR EX: NOTA DE UMA DISCIPLINA - 0 A 10
+FOREIGN     - CHAVE ESTRANGEIRA - VIABILIZA O RELACIONAMENTO ENTRE TABELAS
+
+1 - Europe
+2 - Americas
+3 - Asia
+4 - Middle East and Africa
+
+INSERIR NA TABELA OS VALORES
+
+INSERT INTO REGIOES(REGIAO_ID, REGIAO_NOME)
+VALUES (1,'Europa'); 
+INSERT INTO REGIOES(REGIAO_ID, REGIAO_NOME)
+VALUES (2,'Americas'); 
+
+Comandos SQL (Select, Insert, Delete, Update, CREATE, DROP, ALTER)
+
+Comandos PL/SQL
+
+CREATE OR REPLACE PROCEDURE PROC_INS_REGIAO
+(
+    V_REGIAO_ID     IN   NUMBER,
+    V_REGIAO_NOME   IN   VARCHAR2
+)
+IS 
+BEGIN
+    INSERT INTO REGIOES(REGIAO_ID, REGIAO_NOME)
+    VALUES (V_REGIAO_ID,V_REGIAO_NOME); 
+
+   COMMIT;
+END;
+
+3 - Asia
+4 - Middle East and Africa
+
+CRIAR UM BLOCO ANONIMO
+BEGIN
+    PROC_INS_REGIAO(3,'Asia');
+    PROC_INS_REGIAO(4,'Oriente Medio e Africa');
+END;
+
+SELECT REGIAO_ID, REGIAO_NOME
+FROM REGIOES
+ORDER BY REGIAO_ID ASC
+
+SELECT REGIAO_ID, REGIAO_NOME
+FROM REGIOES
+ORDER BY REGIAO_ID DESC
+
+SELECT REGIAO_ID, REGIAO_NOME
+FROM REGIOES
+ORDER BY REGIAO_NOME ASC
+
+DESC COUNTRIES
+
+Tabela - Countries
+country_id   char(2)      primary key
+country_name varchar2(40) not null
+region_id    number       not null
+
+
+CREATE TABLE PAISES
+(
+     PAIS_ID     CHAR(2)        PRIMARY KEY,
+     PAIS_NOME   VARCHAR2(40)   NOT NULL,
+     REGIAO_ID   NUMBER         NOT NULL,
+     FOREIGN KEY (REGIAO_ID) REFERENCES REGIOES (REGIAO_ID)
+);
+
+SELECT * FROM COUNTRIES
+
+
+COUNTRY_ID	COUNTRY_NAME	REGION_ID
+
+CA	        Canada	        2
+CH	        Switzerland	1
+CN	        China	        3
+DE	        Germany  	1
+DK	        Denmark	        1
+EG	        Egypt	        4
+FR	        France	        1
+HK	        HongKong	3
+IL	        Israel	        4
+IN	        India	        3
+IT	        Italy    	1
+JP	        Japan	        3
+KW	        Kuwait	        4
+MX	        Mexico  	2
+NG	        Nigeria	        4
+NL	        Netherlands	1
+SG	        Singapore	3
+UK	        United Kingdom	1
+US	        United States of America	2
+ZM	        Zambia	        4
+ZW	        Zimbabwe	4
+
+
+INSERT INTO PAISES(PAIS_ID, PAIS_NOME,REGIAO_ID)
+VALUES('AR','Argentina',2);
+
+INSERT INTO PAISES(PAIS_ID, PAIS_NOME,REGIAO_ID)
+VALUES('AU','Australia',3);
+
+INSERT INTO PAISES(PAIS_ID, PAIS_NOME,REGIAO_ID)
+VALUES('BE','Belgium',1);
+
+INSERT INTO PAISES(PAIS_ID, PAIS_NOME,REGIAO_ID)
+VALUES('BR','Brasil',2);
+
+CREATE OR REPLACE PROCEDURE PROC_INS_PAIS
+(
+     V_PAIS_ID       CHAR,
+     V_PAIS_NOME     VARCHAR2,
+     V_REGIAO_ID     NUMBER
+)
+IS
+BEGIN
+    INSERT INTO PAISES(PAIS_ID, PAIS_NOME,REGIAO_ID)
+    VALUES(V_PAIS_ID,V_PAIS_NOME,V_REGIAO_ID );
+
+    COMMIT;
+END;
+
+BLOCO ANONIMO
+
+BEGIN
+   PROC_INS_PAIS('CA','Canada',2);
+   PROC_INS_PAIS('CH','Switzerland',1);
+   PROC_INS_PAIS('CN','China',3);
+   PROC_INS_PAIS('DE','Germany',1);
+   PROC_INS_PAIS('DK','Denmark',1);
+   PROC_INS_PAIS('EG','Egypt',4);
+   PROC_INS_PAIS('FR','France',1);
+   PROC_INS_PAIS('HK','HongKong',3);
+   PROC_INS_PAIS('IL','Israel',4);
+   PROC_INS_PAIS('IN','India',3);
+   PROC_INS_PAIS('IT','Italy',1);
+   PROC_INS_PAIS('JP','Japan',3);
+   PROC_INS_PAIS('KW','Kuwait',4);
+   PROC_INS_PAIS('MX','Mexico',2);
+   PROC_INS_PAIS('NG','Nigeria',4);
+   PROC_INS_PAIS('NL','Netherlands',1);
+   PROC_INS_PAIS('MX','Mexico',2);
+   PROC_INS_PAIS('SG','Singapore',3);
+   PROC_INS_PAIS('UK','United Kingdom',1);
+   PROC_INS_PAIS('US','United States of America',2);
+   PROC_INS_PAIS('ZM','Zambia',4);
+   PROC_INS_PAIS('ZW','Zimbabwe',4);
+END
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+17/03                   Banco de Dados Unipaulistana
+
+SELECT campo1, campo2,...,campoN
+FROM   tabela1, tabela2,...,tabelaN
+WHERE  tabela1.campo1(PK) = tabela2.campo1(FK) AND
+       tabela2.campo2(PK) = tabela3.campo2(FK)
+-----------------------------------------------------------
+Ou a o que est  tentando fazer
+-----------------------------------------------------------
+Exibir os seguintes campos
+Das seguintes tabelas
+Onde as seguintes condi  es devem ser atendidas
+___________________________________________________________
+
+Clausula Where
+-----------------------------------------------------------
+Operadores 
+	> 	maior
+	< 	menor
+	>= 	maior igual
+	<=	menor igual
+	=	igual
+	in	compara  o com lista de valores (10,15,20)
+	not in  fora da lista de valores (10,15,20)
+	between valor1 and valor2     - faixa de valores
+	not between valor1 and valor2 - fora da faixa de valores
+	like compara  o de valores (%a),(a%),(%a%)
+
+Operadores L gicos
+	and   	e
+	or	ou
+	not 	n o
+
+Fun  es de grupo
+	sum	soma
+	avg	m dia
+	max	maior
+	min	menor
+	count	quantidade
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	like compara  o de valores (%a),(a%),(%a%)
+ 
+TODOS QUE TEM A NO NOME
+ 
+SELECT NOME_FUNC
+FROM   FUNCIONARIO
+WHERE  NOME_FUNC LIKE '%A%'
+ 
+TODOS QUE COMECAM A NO NOME
+ 
+SELECT NOME_FUNC
+FROM   FUNCIONARIO
+WHERE  NOME_FUNC LIKE 'A%'
+ 
+TODOS QUE TERMINAM COM a
+SELECT NOME_FUNC
+FROM   FUNCIONARIO
+WHERE  NOME_FUNC LIKE '%a'
+
+
+
+
+ Desafio exibir no modelo HR da Oracle o nome da regiao, o nome do
+departamento o nome do funcionario e o cargo do funcionario. Os campos
+s o region_name, department_name, first_name e job_title
+
+
+0.01 = CHAVE PRIM RIA
+
+N = CHAVE ESTRANGEIRA.6
