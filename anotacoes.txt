@@ -416,3 +416,7 @@ $$========================================$$
 Entramos na seção 05-PHP na WEB
 
 Ultima aula assistida 05 Recebendo dados no PHP
+
+
+$$========================================$$
+06/05/2026
