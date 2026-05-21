@@ -1,0 +1,11 @@
+Mais informaçoes sobre mensager
+
+// Se o arquivo está na mesma pasta
+$nome = 'teste.txt';
+
+// Se o arquivo está em outra pasta, por exemplo:
+$nome = '../outro_pasta/teste.txt';
+// OU caminho absoluto (no Windows):
+$nome = 'C:/xampp/htdocs/PHP/estudos/exercicios_arrays_18_04/teste.txt';
+
+$arquivo = fopen($nome, 'r');
