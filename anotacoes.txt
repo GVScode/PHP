@@ -103,6 +103,7 @@ Dentro do bloco do laço podemos pular uma interação com o comando continue
 Com o comando break podemos sair do laço
 A variável contador normalmente se chama i
 
+$$========================================$$
 28/03/2026       
 
 Operadores de comparação
@@ -161,15 +162,11 @@ $a = true;
 $b = false;
 $comparacao = $a && $b;  // O resultado será o booleano *false*, já que $b é falso.
 
-
-
 O operador OR (||), que traduzindo para o português seria OU, é usado para verificar se pelo menos uma das condições é verdadeira. Se pelo menos uma das condições for verdadeira, o resultado será verdadeiro. Caso contrário, o resultado será falso. Por exemplo:
 
 $a = true;
 $b = false;
 $comparacao = $a || $b; // O resultado será o booleano *true*, já que (pelo menos) o $a é verdadeiro.
-
-
 
 O operador NOT (!) é usado para negar uma condição. Se a condição for verdadeira, o resultado será falso. Se a condição for falsa, o resultado será verdadeiro. Confira um exemplo:
 
@@ -185,8 +182,6 @@ $num = 5;
 $resultado = ++$num; // num é incrementado para 6 e depois atribuído ao resultado
 echo $num; // Exibe 6
 echo $resultado; // Exibe 6
-
-
 
 Já o operador de pós-incremento ($variavel++) aumenta o valor da variável em 1 depois de usar a variável em uma expressão. Por exemplo:
 
@@ -331,6 +326,8 @@ $$========================================$$
 
 
 
+=============== Comandos GIT ===================
+
 Criar nova branch
 
 Para criar uma nova branch no Git e alternar para ela, utilize git checkout -b nome-da-branch ou git switch -c nome-da-branch. O comando -b cria e alterna automaticamente, garantindo que o novo ponteiro inicie no mesmo commit atual. Para enviar a nova branch ao repositório remoto, use git push -u origin nome-da-branch
@@ -341,17 +338,13 @@ Criar nova branch:
 # 2. Fazer o primeiro push com a nova branch:
 git push -u origin nome-da-branch
 
-para apagar a branch atual da sua maquina local, primeiramente saia da branch que quer deletar 
+para apagar a brb anch atual da sua maquina local, primeiramente saia da branch que quer deletar 
 
 # 1. Mude para outra branch (ex: main ou master)
 git switch main   # ou: git checkout main
 
 # 2. Agora sim, delete a branch desejada
 git branch -D exercicios_18_04
-
-
-
-mais comandos git:
 
 iniciar uma área de trabalho (veja também: git help tutorial)
    clone     Clonar um repositório em um novo diretório

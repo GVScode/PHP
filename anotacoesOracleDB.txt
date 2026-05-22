@@ -107,19 +107,19 @@ A01_CREDITO    NUMBER(10,2)
 
 
 INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
-VALUES ('1','Guilherme','rua jose vasconcelos','11960558799','45645645644','1231,00')
+VALUES ('1','Marlon jason','rua maria 88','11960558799','45645645644','1231,00')
 
 INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
-VALUES ('2','Giovanna','rua jose vasconcelos','11960545799','44445645644','789789,00')
+VALUES ('2','Mauro Willian','rua casa de vasco','11960545799','44445645644','789789,00')
 
 INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
-VALUES ('3','Murilo','rua jose vasconcelos','11969958799','45645647744','199991,00')
+VALUES ('3','Miguel Carlos','rua lindalva','11969958799','45645647744','199991,00')
 
 INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
-VALUES ('4','Joselia','rua jose vasconcelos','11960558666','45645645454','987987,00')
+VALUES ('4','Julia oliveira','rua alteres 77','11960558666','45645645454','987987,00')
 
 INSERT INTO CLIENTE_01(a01_codigo,a01_nome,a01_endereco,a01_telefone,a01_cpf,a01_credito) 
-VALUES ('5','Joselito','rua jose vasconcelos','11960558711','45645645611','12551,00')
+VALUES ('5','Antonio Vilela','rua santo antonio 88','11960558711','45645645611','12551,00')
 
 
 SELECT * FROM  CLIENTE_01
@@ -172,7 +172,7 @@ SELECT * FROM PEDIDO_02_cliente_01
 
 Cartacter sticas de um diagrama ER (Entidade/ Relacionamento) 	
 
-- Diagrama claro e objetvo
+- Diagrama claro e objetvofv
 - Pode ser ensinado ao usu rio para entendimento e o usu rio possa colaborar com an lise
 do diagrama
 - Facil de ser desenvolvido
